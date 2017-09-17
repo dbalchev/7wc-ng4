@@ -41,7 +41,7 @@ class PlayerScore {
 export class ScoreboardComponent implements OnInit {
 
   FIELDS=FIELDS;
-  public players: Array<PlayerScore> = [new PlayerScore('dani'), new PlayerScore('mimi')];
+  public players: Array<PlayerScore> = [];
   constructor() { }
 
   ngOnInit() {
