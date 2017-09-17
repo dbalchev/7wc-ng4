@@ -16,7 +16,7 @@
             <div *ngFor="let player of players" class="col">
                 <div>{{player.name}}</div>
                 <div *ngFor="let field of FIELDS; let idx = index" [ngClass]="'tr-' + field.name">
-                    <input type="number" [(ngModel)]="player.scores[idx]" [ngClass]="'tr-' + field.name">
+                    <input type="number" [(ngModel)]="player.scores[idx]" [ngClass]="'tr-' + field.name" [attr.tabindex]='idx + 1'>
                 </div>
                 <div class="result">{{player.sum()}}</div>
             </div>
