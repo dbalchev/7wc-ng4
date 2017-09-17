@@ -41,7 +41,7 @@ class PlayerScore {
 export class ScoreboardComponent implements OnInit {
 
   FIELDS=FIELDS;
-  private players: Array<PlayerScore> = [];
+  public players: Array<PlayerScore> = [];
   constructor() { }
 
   ngOnInit() {
