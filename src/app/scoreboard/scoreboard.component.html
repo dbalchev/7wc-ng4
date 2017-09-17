@@ -11,7 +11,7 @@
     <tr *ngFor="let field of FIELDS; let idx = index" [ngClass]="'tr-' + field.name">
         <td>{{field.label}}</td>
         <td *ngFor="let player of players">
-            <input type="number" [(ngModel)]="player.scores[idx]">
+            <input type="number" [(ngModel)]="player.scores[idx]" [ngClass]="'tr-' + field.name">
         </td>
     </tr>
     <tr class="result">
