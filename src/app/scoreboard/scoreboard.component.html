@@ -1,0 +1,21 @@
+<form (submit)="addPlayer(newPlayerName)">
+  <input mdInput type="text" #newPlayerName placeholder="Нов играч">
+</form>
+<table>
+    <tr>
+        <th>&nbsp;</th>
+        <th *ngFor="let player of players">
+            {{player.name}}
+        </th>
+    </tr>
+    <tr *ngFor="let field of FIELDS; let idx = index" [ngClass]="'tr-' + field.name">
+        <td>{{field.label}}</td>
+        <td *ngFor="let player of players">
+            <input type="number" [(ngModel)]="player.scores[idx]">
+        </td>
+    </tr>
+    <tr class="result">
+        <td>Резултат</td>
+        <td *ngFor="let player of players">{{player.sum()}}</td>
+    </tr>
+</table>

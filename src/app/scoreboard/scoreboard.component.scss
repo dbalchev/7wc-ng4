@@ -1,0 +1,61 @@
+.tr-war {
+  background-color:red;
+}
+.tr-trade {
+  background-color:yellow;
+}
+.tr-guides {
+  color: white;
+  background-color:purple;
+}
+.tr-science {
+  color :white;
+  background-color:green;
+}
+.tr-building {
+  color :white;
+  background-color:blue;
+}
+.tr-wonders {
+  background-color:orange;
+}
+.tr-black {
+  background-color: black;
+  color: white;
+}
+
+table * {
+  padding:0;
+  border:0;
+  margin:0;
+
+}
+table {
+  border-spacing: 0;
+  margin-top:1em;
+  background-color:white;
+  box-shadow: 1px 1px 1em #888888;
+  border-radius: 0.2em;
+
+  .result > td {
+    border-top: 2px solid black;
+  }
+}
+
+tr {
+    td {
+        border-right: 1px solid black;
+    }
+    td:last-of-type {
+        border-right: none;
+    }
+    input {
+          background: transparent;
+          border: none;
+      }
+}
+.footer {
+  position:fixed;
+  bottom:0;
+  z-index:-1;
+}
