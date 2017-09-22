@@ -36,6 +36,10 @@
     border-right: 1px solid black;
     * {
         flex: 1 1 auto;
+
+    }
+    & > * {
+        height: 1.2em;
     }
     &:last-of-type {
         border-right: none;
