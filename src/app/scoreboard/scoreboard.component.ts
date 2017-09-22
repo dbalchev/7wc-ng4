@@ -1,5 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition
+} from '@angular/animations';
+
 class Field {
     constructor (
         public name: string,
@@ -36,7 +44,16 @@ class PlayerScore {
 @Component({
   selector: 'app-scoreboard',
   templateUrl: './scoreboard.component.html',
-  styleUrls: ['./scoreboard.component.scss']
+  styleUrls: ['./scoreboard.component.scss'],
+  animations: [
+      trigger('inTrigger', [
+        state('in',style({transform: "scale(1)"})),
+        transition('void => *', [
+            style({width: "0"}),
+            animate(200)
+        ])
+    ])
+  ]
 })
 export class ScoreboardComponent implements OnInit {
 

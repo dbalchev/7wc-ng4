@@ -28,13 +28,15 @@
     display: inline-flex;
     margin-top:1em;
     background-color:white;
-    box-shadow: 1px 1px 1em #888888;
-    border-radius: 0.2em;
+    padding: 0;
 }
 .col {
     display: flex;
     flex-direction: column;
     border-right: 1px solid black;
+    * {
+        flex: 1 1 auto;
+    }
     &:last-of-type {
         border-right: none;
     }
